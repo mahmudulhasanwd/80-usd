@@ -355,20 +355,39 @@
 
 	// code for cart
 	$("#beg").click(function (){
-		$(".cart").animate({
+		$(".mini-cart").animate({
 			"right":"0"
 		});
 
 		$("body").addClass("overflow");
 	});
 
-	$(".cart-heading span").click(function (){
-		$(".cart").animate({
+	$(".mini-cart-heading img").click(function (){
+		$(".mini-cart").animate({
 			"right":"-100%"
 		});
 
 		$("body").removeClass("overflow");
 	});
+
+	// maincard load
+	$("#main-card").click(function (){
+		$(".mini-cart").animate({
+			"right":"-100%"
+		});
+
+		$(".cart").animate({
+			"right":"0%"
+		});
+	})
+
+	$(".cart-heading span").click(function (){
+		$(".cart").animate({
+			"right":"-100%"
+		});
+
+		$("body").removeClass("overflow")
+	})
 
 	// code for hide card items
 	$(".cart-block-one-left img#remove").click(function (){
@@ -448,18 +467,33 @@
 
 	// signin popup
 	$("#signin").click(function (){
-		$(".login").animate({
+		$("#siglog").animate({
 			"right":"0px"
 		});
 		$("body").addClass("overflow");
 	});
 
 	$(".login-wrapper .cart-heading span").click(function (){
-		$(".login").animate({
+		$("#siglog").animate({
 			"right":"-100%"
 		});
 		$("body").removeClass("overflow");
 	});
+
+		// register popup
+		$("#regtigger").click(function (){
+			$("#registerlog").animate({
+				"right":"0px"
+			});
+			$("body").addClass("overflow");
+		});
+	
+		$("#registerlog .login-wrapper .cart-heading span").click(function (){
+			$("#registerlog").animate({
+				"right":"-100%"
+			});
+			$("body").removeClass("overflow");
+		});
 
 
 	// code for phn reginput
@@ -523,26 +557,6 @@
 
 
 	// phnregister show hide
-	$("#phnregistershow").click(function (){
-		$(".phone-register").show();
-		$(".login-form-next").hide();
-	})
-
-	$("#backtosignin").click(function (){
-		$(".phone-register").hide();
-		$(".login-form-next").show();
-	})
-
-	$("#erigister").click(function (){
-		$("#eregister-form").hide();
-		$("#afterclick").show();
-	});
-
-	$("#afterclickshow").click(function () {
-		$("#eregister-form").show();
-		$("#afterclick").hide();
-	})
-
 
 	$("#pop-one input").focus(function (){
 		$("label#pop-one-label").animate({
@@ -619,6 +633,24 @@
 				"top":"12px"
 			});
 		}
+	});
+
+
+	// pin confirm page
+	$("button#go4conf").click(function (){
+		$(".phone-register").hide();
+		$(".confirmation").show();
+	});
+
+	// code for searchbar
+	$("#ser").click(function (){
+		$(".search").show();
+		$("body").addClass("overflow");
+	});
+
+	$(".search-button button").click(function (){
+		$(".search").hide();
+		$("body").removeClass("overflow");
 	})
 	
 
