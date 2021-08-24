@@ -221,7 +221,7 @@ ul {
     width: 100%;
     left: 0;
     top: 42%;
-    z-index: 999999;
+    z-index: 999;
 }
 
 .hero-slider-nav span {
@@ -891,9 +891,10 @@ ul {
     padding: 10px;
     position: absolute;
     top: 0;
-    right: -100%;
+    display: none;
     height: 100vh;
     z-index: 999999999;
+    right: 0;
 }
 
 .cart-heading {
@@ -1086,6 +1087,7 @@ border-radius: 10px;
 
 .cart-input-button {
     border: 1px solid #BCBCBC;
+    overflow: hidden;
 }
 
 .price ul li {
@@ -1152,6 +1154,23 @@ border-radius: 10px;
     z-index: 999999;
 }
 
+.overflowsm {
+    position: relative;
+    overflow: hidden;
+}
+
+.overflowsm:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,.7);
+    z-index: 999999;
+}
+
 /* -- cart area start -- */
 
 /* -- login area start -- */
@@ -1163,9 +1182,10 @@ border-radius: 10px;
     padding: 10px;
     position: absolute;
     top: 0;
-    right: -100%;
+    display: none;
     height: 100vh;
     z-index: 999999999;
+    right: 0;
 }
 
 .login-tab-heading .flex-column {
@@ -1516,9 +1536,10 @@ p#recheckbox {
     padding: 10px;
     position: absolute;
     top: 107px;
-    right: -100%;
+    display: none;
     z-index: 999999999;
     padding-bottom: 25px;
+    right: 0;
 }
 
 .mini-cart:after {
@@ -1774,7 +1795,7 @@ p#recheckbox {
 }
 
 .header {
-    z-index: 99999999;
+    z-index: 99999;
 }
 
 /* -- sm-header area start -- */
@@ -1829,6 +1850,128 @@ p#recheckbox {
     color: #f9ae15;
 }
 
-
-
 /* -- bars area end -- */
+
+/* -- sm-menu-items area start -- */
+.sm-menu-items {
+    position: fixed;
+    width: 90%;
+    height: 100vh;
+    background: #fff;
+    left: -100%;
+    top: 0;
+    z-index: 9999999;
+}
+
+.sm-menu-items-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 70%;
+}
+
+.sm-menu-items-heading span {
+    cursor: pointer;
+}
+
+.sm-menu-items-heading span img {
+    display: inline-block;
+    cursor: pointer;
+    width: 15px;
+}
+
+.sm-menu-items-heading  a img {
+    display: inline-block;
+    width: 130px;
+}
+
+.sm-menu-heading-wrapper {
+    padding: 10px 0px;
+    border-bottom: 1px solid #dddddd54;
+}
+
+.sm-menu-singup-man ul li a {
+    display: block;
+    color: #585858;
+    padding: 5px 0px;
+}
+
+.sm-menu-singup-man ul li:last-child a {
+    padding-left: 37px;
+}
+
+.sm-menu-singup-man ul li a img {
+    display: inline-block;
+    width: 16px;
+    margin-right: 15px;
+}
+
+.sm-menu-singup-man {
+    border-bottom: 1px solid #dddddd54;
+}
+
+.sm-menu-signup-two ul li a {
+    display: block;
+    color: #585858;
+    padding: 5px 0px;
+    border-bottom: 1px solid #dddddd54;
+    padding-left: 37px;
+}
+
+.sm-menu-singup-product ul li a {
+    display: block;
+    color: #585858;
+    padding: 5px 0px;
+    border-bottom: 1px solid #dddddd54;
+}
+
+.sm-menu-singup-product ul li a span#leftimg {
+    width: 36px;
+    display: inline-block;
+}
+
+.sm-menu-singup-product ul li a span#ba img {
+    float: right;
+    display: inline-block;
+    width: 8px;
+    position: relative;
+    top: 4px;
+}
+
+.menu-sub-heading p {
+    margin-bottom: 0;
+    color: #585858;
+    padding: 5px 0px;
+    border-bottom: 1px solid #dddddd54;
+    cursor: pointer;
+}
+
+.menu-sub-heading p span img {
+    width: 8px;
+}
+
+.menu-sub-heading p span  {
+    display: inline-block;
+    width: 35px;
+}
+
+.sm-menu-items-wrapper {
+    position: relative;
+}
+
+.menu-sub {
+    background: #fff;
+    width: 100%;
+    position: absolute;
+    left: -100%;
+    top: 52px;
+    height: 100vh;
+    z-index: 999999;
+}
+
+.menu-sub ul li a {
+    border: 0!important;
+}
+
+
+/* -- sm-menu-items area end -- */

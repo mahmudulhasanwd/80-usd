@@ -79,10 +79,10 @@
 					items: 3
 				},
 				768 : {
-					items: 1
+					items: 4
 				},
 				960 : {
-					items: 1
+					items: 4
 				},
 				1200 : {
 					items: 4
@@ -132,10 +132,10 @@
 				items: 3
 			},
 			768 : {
-				items: 1
+				items: 4
 			},
 			960 : {
-				items: 1
+				items: 4
 			},
 			1200 : {
 				items: 4
@@ -179,10 +179,10 @@
 				items: 3
 			},
 			768 : {
-				items: 1
+				items: 4
 			},
 			960 : {
-				items: 1
+				items: 4
 			},
 			1200 : {
 				items: 4
@@ -225,10 +225,10 @@
 				items: 3
 			},
 			768 : {
-				items: 1
+				items: 4
 			},
 			960 : {
-				items: 1
+				items: 4
 			},
 			1200 : {
 				items: 4
@@ -272,10 +272,10 @@
 				items: 3
 			},
 			768 : {
-				items: 1
+				items: 4
 			},
 			960 : {
-				items: 1
+				items: 4
 			},
 			1200 : {
 				items: 4
@@ -355,34 +355,26 @@
 
 	// code for cart
 	$("#beg").click(function (){
-		$(".mini-cart").animate({
-			"right":"0"
-		});
+		$(".mini-cart").show();
 
 		$("body").addClass("overflow");
 	});
 
 	$(".mini-cart-heading img").click(function (){
-		$(".mini-cart").animate({
-			"right":"-100%"
-		});
+		$(".mini-cart").hide();
 
 		$("body").removeClass("overflow");
 	});
 
 
 	$("#smbeg").click(function (){
-		$(".mini-cart").animate({
-			"right":"0"
-		});
+		$(".mini-cart").show();
 
 		$("body").addClass("overflow");
 	});
 
 	$(".mini-cart-heading img").click(function (){
-		$(".mini-cart").animate({
-			"right":"-100%"
-		});
+		$(".mini-cart").hide();
 
 		$("body").removeClass("overflow");
 	});
@@ -390,19 +382,13 @@
 
 	// maincard load
 	$("#main-card").click(function (){
-		$(".mini-cart").animate({
-			"right":"-100%"
-		});
+		$(".mini-cart").hide();
 
-		$(".cart").animate({
-			"right":"0%"
-		});
+		$(".cart").show();
 	})
 
 	$(".cart-heading span").click(function (){
-		$(".cart").animate({
-			"right":"-100%"
-		});
+		$(".cart").hide();
 
 		$("body").removeClass("overflow")
 	})
@@ -485,31 +471,23 @@
 
 	// signin popup
 	$("#signin").click(function (){
-		$("#siglog").animate({
-			"right":"0px"
-		});
+		$("#siglog").show();
 		$("body").addClass("overflow");
 	});
 
 	$(".login-wrapper .cart-heading span").click(function (){
-		$("#siglog").animate({
-			"right":"-100%"
-		});
+		$("#siglog").hide();
 		$("body").removeClass("overflow");
 	});
 
 		// register popup
 		$("#regtigger").click(function (){
-			$("#registerlog").animate({
-				"right":"0px"
-			});
+			$("#registerlog").show();
 			$("body").addClass("overflow");
 		});
 	
 		$("#registerlog .login-wrapper .cart-heading span").click(function (){
-			$("#registerlog").animate({
-				"right":"-100%"
-			});
+			$("#registerlog").hide();
 			$("body").removeClass("overflow");
 		});
 
@@ -681,6 +659,45 @@
 		$(".search").hide();
 		$("body").removeClass("overflow");
 	})
+
+	// code for sm-menu
+	$(".sm-header-left").click(function (){
+		$(".sm-menu-items").animate({
+			"left":"0%"
+		})
+		$("body").addClass("overflowsm");
+	});
+
+	$(".sm-menu-items-heading span").click(function (){
+		$(".sm-menu-items").animate({
+			"left":"-100%"
+		})
+		$("body").removeClass("overflowsm");
+	})
+
+
+	// code for sm-link-register
+	$("#smlinkregister").click(function (){
+		$("#registerlog").show();
+	});
+
+	$("#smlinksign").click(function (){
+		$("#siglog").show();
+	});
+
+	$(".sm-menu-singup-product ul li a").click(function(){
+		$(this).next(".menu-sub").animate({
+			"left":"0%"
+		});
+	});
+
+	$(".menu-sub-heading").click(function(){
+		$(this).parents(".menu-sub").animate({
+			"left":"-100%"
+		});
+	});
+
+	
 	
 
 
