@@ -19,7 +19,7 @@
 
 		// code for alert
 		$(".alert-wrapper p span").click (function (){
-			$(".alert").hide();
+			$(".alertspg").hide();
 		});
 
 		// code for hero slider
@@ -69,14 +69,14 @@
 			margin: 8,
 			center: false,
 			nav: false,
-			dots: true,
+			dots: false,
 			autoplay:false,
 			autoplayTimeout:5000,
 			responsiveClass: true,
 			responsiveRefreshRate: true,
 			responsive : {
 				0 : {
-					items: 1
+					items: 3
 				},
 				768 : {
 					items: 1
@@ -122,14 +122,14 @@
 		margin: 8,
 		center: false,
 		nav: false,
-		dots: true,
+		dots: false,
 		autoplay:false,
 		autoplayTimeout:5000,
 		responsiveClass: true,
 		responsiveRefreshRate: true,
 		responsive : {
 			0 : {
-				items: 1
+				items: 3
 			},
 			768 : {
 				items: 1
@@ -169,14 +169,14 @@
 		margin: 8,
 		center: false,
 		nav: false,
-		dots: true,
+		dots: false,
 		autoplay:false,
 		autoplayTimeout:5000,
 		responsiveClass: true,
 		responsiveRefreshRate: true,
 		responsive : {
 			0 : {
-				items: 1
+				items: 3
 			},
 			768 : {
 				items: 1
@@ -215,14 +215,14 @@
 		margin: 8,
 		center: false,
 		nav: false,
-		dots: true,
+		dots: false,
 		autoplay:false,
 		autoplayTimeout:5000,
 		responsiveClass: true,
 		responsiveRefreshRate: true,
 		responsive : {
 			0 : {
-				items: 1
+				items: 3
 			},
 			768 : {
 				items: 1
@@ -262,14 +262,14 @@
 		margin: 8,
 		center: false,
 		nav: false,
-		dots: true,
+		dots: false,
 		autoplay:false,
 		autoplayTimeout:5000,
 		responsiveClass: true,
 		responsiveRefreshRate: true,
 		responsive : {
 			0 : {
-				items: 1
+				items: 3
 			},
 			768 : {
 				items: 1
@@ -369,6 +369,24 @@
 
 		$("body").removeClass("overflow");
 	});
+
+
+	$("#smbeg").click(function (){
+		$(".mini-cart").animate({
+			"right":"0"
+		});
+
+		$("body").addClass("overflow");
+	});
+
+	$(".mini-cart-heading img").click(function (){
+		$(".mini-cart").animate({
+			"right":"-100%"
+		});
+
+		$("body").removeClass("overflow");
+	});
+
 
 	// maincard load
 	$("#main-card").click(function (){
@@ -644,6 +662,17 @@
 
 	// code for searchbar
 	$("#ser").click(function (){
+		$(".search").show();
+		$("body").addClass("overflow");
+	});
+
+	$(".search-button button").click(function (){
+		$(".search").hide();
+		$("body").removeClass("overflow");
+	})
+
+
+	$("#smser").click(function (){
 		$(".search").show();
 		$("body").addClass("overflow");
 	});

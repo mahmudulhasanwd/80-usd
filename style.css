@@ -64,10 +64,11 @@ ul {
 }
 
 /* -- alert area start -- */
-.alert {
+.alertspg {
     background-color: #292929;
     padding: 6px 0px;
     margin: 0;
+    border-radius: 0;
 }
 
 .alert-wrapper p {
@@ -1775,3 +1776,59 @@ p#recheckbox {
 .header {
     z-index: 99999999;
 }
+
+/* -- sm-header area start -- */
+.sm-header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sm-header-left {
+    cursor: pointer;
+    width: 35px;
+}
+
+.sm-header-left span {
+    width: 100%;
+    height: 4px;
+    background: #292929;
+    margin: 6px 0px;
+    display: block;
+}
+
+.sm-header {
+    padding: 15px 0px;
+    border-bottom: 1px solid #EAEAEA;
+}
+
+/* -- sm-header area end -- */
+
+/* -- bars area start -- */
+.bars-wrapper ul li {
+    display: inline-block;
+}
+
+.bars-wrapper ul li a {
+    display: inline-block;
+    font-size: 15px;
+    color: #a3a3a3;
+    margin: 0px 15px;
+}
+
+.bars-wrapper ul li a span {
+    display: inline-block;
+    color: #585858;
+}
+
+.bars {
+    padding: 8px 0px;
+}
+
+.bars-wrapper ul li:last-child a {
+    color: #f9ae15;
+}
+
+
+
+/* -- bars area end -- */
